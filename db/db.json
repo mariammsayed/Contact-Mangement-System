@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "8619",
+      "firstName": "user2",
+      "lastName": "user2",
+      "phone": "01111111111",
+      "email": "user2@gmail.com",
+      "city": "alex"
+    },
+    {
+      "id": "1d67",
+      "firstName": "user",
+      "lastName": "user",
+      "phone": "01111111111",
+      "email": "user@gmail.com",
+      "city": "cairo"
+    }
+  ],
+  "signup": [],
+  "admin-SignUp": [
+    {
+      "id": "1423",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "1234567"
+    }
+  ]
+}

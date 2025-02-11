@@ -1,0 +1,79 @@
+@if (isShow) {
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-2-strong" >
+                        <div class="card-body p-5 text-center">
+                            <h3 class="mb-3">Admin Login</h3>
+    
+    
+                            <!-- Form -->
+                             <form [formGroup]="loginForm" >
+                                <div class="form-outline mb-4">
+                                    <input formControlName="email" placeholder="Enter Your Email..." name="email"  type="email" id="login-email" class="shadow-sm w-100 p-2 rounded" formControlName="email" >
+                                </div>
+    
+                                <div class="form-outline mb-3">
+                                    @if (valid) { <p class="text-danger">Incorrect Password or Email</p>}
+                                    <input formControlName="password" placeholder="Enter Your Password..." name="pass"  type="password" id="login-pass" class="shadow-sm w-100 p-2 rounded" formControlName="password" >
+                                </div>
+    
+                                <button (click)="adminLogin()"  type="button" class="btn btn-success py-2 px-4 me-3" >Login</button>
+                                <button type="button" class="btn btn-dark py-2 px-4" routerLink="/">Home</button>
+                                <div class="mt-3">
+                                    <p>Don't Have An Account? <a (click)="signup()" >Sign Up</a></p>
+                                </div>
+                             </form>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    
+}
+
+
+<!-- Admin Signup -->
+
+
+@if (!isShow) {
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-2-strong" >
+                        <div class="card-body p-5 text-center">
+                            <h3 class="mb-3">Admin Signup</h3>
+    
+    
+                            <!-- Form -->
+                             <form [formGroup]="signupForm" >
+                                <div class="form-outline mb-4">
+                                    <input formControlName="name" placeholder="Enter Your Name..." name="name"  type="text" id="name" class="shadow-sm w-100 p-2 rounded" formControlName="name" >
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <input formControlName="email" placeholder="Enter Your Email..." name="email"  type="email" id="email" class="shadow-sm w-100 p-2 rounded" formControlName="email" >
+                                </div>
+    
+                                <div class="form-outline mb-3">
+                                    <input formControlName="password" placeholder="Enter Your Password..." name="pass"  type="password" id="pass" class="shadow-sm w-100 p-2 rounded" formControlName="password" >
+                                </div>
+    
+                                <button (click)="adminSignUp()" [disabled]="!signupForm.valid" type="button" class="btn btn-dark py-2 px-4 me-3" >Signup</button>
+                                <div class="mt-3">
+                                    <p>Already Have An Account? <a (click)="login()" >Login</a></p>
+                                </div>
+                             </form>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+}

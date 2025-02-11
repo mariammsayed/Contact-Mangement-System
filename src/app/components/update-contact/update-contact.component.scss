@@ -1,0 +1,25 @@
+$main-color:green;
+
+
+.contact-img{
+    width: 600px;
+    // margin-top: 85px;
+}
+input{
+    border: none;
+    outline: none;
+    border: 1px solid $main-color;
+}
+h1::after{
+    content: '';
+    position: absolute;
+    z-index: 111;
+    background-color: $main-color;
+    width: 150px;
+    height: 1.5px;
+    bottom:  -20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
